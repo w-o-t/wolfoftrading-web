@@ -128,3 +128,9 @@ body {
 .badge-icon {
   font-size: 18px;
 }
+
+.plan-buttons button {
+  box-shadow:
+  0 4px 10px rgba(0,0,0,0.15),
+  0 2px 4px rgba(0,0,0,0.1);
+}
