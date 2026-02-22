@@ -45,8 +45,8 @@ export default function PlanCard({
     window.location.href = data.url;
   };
 
-  const mtlPrice = isPremium ? "99,00 € / Monat | mtl. kündb." : "49,00 € / Monat | mtl. kündb."
-  const yrlPrice = isPremium ? "950,40 € / Jahr | - 20% | jährl. kündb." : "529,20 € / Jahr | - 10% | jährl. kündb."
+  const mtlPrice = isPremium ? "99,00 € / Monat <br> (mtl. kündb.)" : "49,00 € / Monat <br> (mtl. kündb.)"
+  const yrlPrice = isPremium ? "950,40 € / Jahr <br> (- 20% | jährl. kündb.)" : "529,20 € / Jahr <br> (- 10% | jährl. kündb.)"
 
   return (
     <div className={`plan-card ${isPremium ? "premium" : "standard"}`}>
