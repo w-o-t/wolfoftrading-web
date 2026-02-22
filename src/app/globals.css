@@ -24,16 +24,16 @@ body {
 }
 
 .page-wrapper.dark.standard {
-  --bg: #292929;
+  --bg: #222222;
   --card-bg: #f39d121f;
-  --button-bg: #161616;
+  --button-bg: #1f1f1f;
   --text: rgba(255,255,255,0.95);
 }
 
 .page-wrapper.dark.premium {
-  --bg: #292929;
+  --bg: #222222;
   --card-bg: #1db9541c;
-  --button-bg: #161616;
+  --button-bg: #1f1f1f;
   --text: rgba(255,255,255,0.95);
 }
 
