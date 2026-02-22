@@ -2,23 +2,22 @@
 
 import { useSearchParams } from "next/navigation";
 
-export default function StandardContent() {
+export default function PremiumPage() {
   const searchParams = useSearchParams();
   const userId = searchParams.get("uid");
 
   const startCheckout = async (priceId: string) => {
     if (!userId) {
-      alert("User ID fehlt.");
+      alert("User ID fehlt");
       return;
     }
 
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/create-checkout-session`,
+    const res = await fetch(
+      process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL!,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
         },
         body: JSON.stringify({
           priceId,
@@ -27,50 +26,102 @@ export default function StandardContent() {
       }
     );
 
-    const data = await response.json();
+    const data = await res.json();
 
-    if (data.url) {
-      window.location.href = data.url;
-    } else {
+    if (!data.url) {
       alert("Stripe konnte nicht gestartet werden.");
-      console.error(data);
+      return;
     }
+
+    window.location.href = data.url;
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6">
-      <h1 className="text-3xl font-bold mb-6">Standard Trader</h1>
+    <div style={styles.wrapper}>
+      <div style={styles.card}>
+        <div style={styles.title}>Premium Trader</div>
 
-      <div className="space-y-4 mb-8 text-center">
-        <p>✓ 7/20 Realtime Signale</p>
-        <p>✓ Equity Kurve</p>
-        <p>✓ Statistik</p>
-        <p>✓ Tradedetails</p>
-      </div>
+        <ul style={styles.list}>
+          <li>🔥 20/20 Realtime-Signale</li>
+          <li>🔥 Equity-Kurve & Profi Analytics</li>
+          <li>🔥 Statistik (erweitert)</li>
+          <li>🔥 Tradedetails (erweitert)</li>
+          <li>🔥 Signal-Historie</li>
+          <li>🔥 Priorisierte Pushes</li>
+          <li>🔥🔥 EA Copytrading</li>
+        </ul>
 
-      <div className="flex gap-4">
-        <button
-          onClick={() =>
-            startCheckout(
-              process.env.NEXT_PUBLIC_STANDARD_MONTHLY_PRICE!
-            )
-          }
-          className="bg-blue-500 text-white px-6 py-3 rounded-xl"
-        >
-          Monatlich
-        </button>
+        <div style={styles.buttonRow}>
+          <button
+            style={styles.button}
+            onClick={() =>
+              startCheckout(
+                process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY!
+              )
+            }
+          >
+            Monatlich
+          </button>
 
-        <button
-          onClick={() =>
-            startCheckout(
-              process.env.NEXT_PUBLIC_STANDARD_YEARLY_PRICE!
-            )
-          }
-          className="bg-blue-600 text-white px-6 py-3 rounded-xl"
-        >
-          Jährlich
-        </button>
+          <button
+            style={styles.button}
+            onClick={() =>
+              startCheckout(
+                process.env.NEXT_PUBLIC_PRICE_STANDARD_YEARLY!
+              )
+            }
+          >
+            Jährlich
+          </button>
+        </div>
       </div>
     </div>
   );
 }
+
+const styles: any = {
+  wrapper: {
+    backgroundColor: "#0E0E0E",
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+  card: {
+    backgroundColor: "#1A1A1A",
+    border: "2px solid #F5A623",
+    borderRadius: 20,
+    padding: 30,
+    width: 380,
+    boxShadow: "0 0 25px rgba(245,166,35,0.4)",
+    color: "white",
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginBottom: 20,
+    color: "#F5A623",
+  },
+  list: {
+    listStyle: "none",
+    padding: 0,
+    marginBottom: 30,
+    lineHeight: "32px",
+    fontSize: 16,
+  },
+  buttonRow: {
+    display: "flex",
+    gap: 15,
+  },
+  button: {
+    flex: 1,
+    padding: "12px 0",
+    borderRadius: 50,
+    border: "none",
+    background: "#121212",
+    color: "white",
+    cursor: "pointer",
+    fontSize: 14,
+  },
+};
