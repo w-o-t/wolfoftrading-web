@@ -45,8 +45,8 @@ export default function PlanCard({
     window.location.href = data.url;
   };
 
-  const mtlPrice = isPremium ? "99,00 € / Monat" : "49,00 € / Monat"
-  const yrlPrice = isPremium ? "950,40 € / Jahr" : "529,20 € / Jahr"
+  const mtlPrice = isPremium ? "99,00 € / Monat*" : "49,00 € / Monat*"
+  const yrlPrice = isPremium ? "950,40 € / Jahr*" : "529,20 € / Jahr*"
 
   return (
     <div className={`plan-card ${isPremium ? "premium" : "standard"}`}>
@@ -82,9 +82,7 @@ export default function PlanCard({
         </button>
       </div>
       <div>
-        <ul> Preis mtl. ist mtl. kündbar. /n Preis jährl. ist jährl. kündbar.</ul>
-        <ul> </ul>
-        <ul> Action: 10% auf den Standard Trader jährl. / 20% Premium Trader jährl.</ul>
+        <ul> * Preis mtl. ist mtl. und jährl. ist jährl. kündbar. | Action: 10% auf den Standard Trader jährl. / 20% Premium Trader jährl.</ul>
       </div>
     </div>
   );
