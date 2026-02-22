@@ -1,0 +1,82 @@
+/* === RESET === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* === THEME VARS === */
+.page-wrapper.light {
+  --bg: #ede5d8;
+  --card-bg: #e5d7c2;
+  --button-bg: #e7e0d5;
+  --text: #3a2f1f;
+}
+
+.page-wrapper.dark {
+  --bg: #121212;
+  --card-bg: #1c1c1e;
+  --button-bg: #1c1c1e;
+  --text: rgba(255,255,255,0.95);
+}
+
+/* === PAGE === */
+.page-wrapper {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 20px;
+}
+
+/* === CARD === */
+.plan-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.plan-card.standard {
+  border: 2px solid #f39c12;
+}
+
+.plan-card.premium {
+  border: 2px solid #1db954;
+}
+
+.plan-header {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.plan-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text);
+}
+
+.plan-list li {
+  margin-bottom: 10px;
+}
+
+.plan-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.plan-buttons button {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 40px;
+  border: none;
+  background: var(--button-bg);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+}
