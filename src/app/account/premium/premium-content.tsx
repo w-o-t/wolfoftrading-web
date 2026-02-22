@@ -56,7 +56,7 @@ export default function PremiumContent() {
           }
           className="bg-yellow-500 text-black px-6 py-3 rounded-xl"
         >
-          Monatlich
+          Monatlich 
         </button>
 
         <button
