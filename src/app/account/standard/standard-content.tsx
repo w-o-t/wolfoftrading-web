@@ -10,7 +10,7 @@ export default function PremiumPage() {
 
 
   return (
-  <div className={`page-wrapper ${theme}`}>
+  <div className={`page-wrapper ${theme} standard`}>
 
     <PlanCard
       type="standard"

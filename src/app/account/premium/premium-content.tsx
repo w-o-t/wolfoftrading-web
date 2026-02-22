@@ -8,7 +8,7 @@ export default function PremiumPage() {
   const userId = searchParams.get("uid");
   const theme = searchParams.get("theme") === "dark" ? "dark" : "light";
   return (
-  <div className={`page-wrapper ${theme}`}>
+  <div className={`page-wrapper ${theme} premium`}>
     <PlanCard
       type="premium"
       title="Premium Trader"

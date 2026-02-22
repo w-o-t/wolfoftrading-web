@@ -24,8 +24,7 @@ export default function PlanCard({
       alert("User ID fehlt");
       return;
     }
-    console.log("PID:", priceId);
-    console.log("userID:", userId);
+    
 
     const res = await fetch(
       process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL!,
@@ -47,7 +46,23 @@ export default function PlanCard({
 
   return (
     <div className={`plan-card ${isPremium ? "premium" : "standard"}`}>
-      <div className="plan-header">{title}</div>
+      <div className="plan-header-wrapper">
+  <div className={`plan-badge ${isPremium ? "premium" : "standard"}`}>
+    <span className="badge-icon">
+      <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="badge-icon"
+  >
+    <path d="M12 2l2.39 4.84L20 7.27l-4 3.89.94 5.48L12 14.77l-4.94 2.87L8 11.16 4 7.27l5.61-.43L12 2z" />
+  </svg>
+    </span>
+    <span>{title}</span>
+  </div>
+</div>      
       <ul className="plan-list">
         {features.map((f, i) => (
           <li key={i}>{f}</li>
@@ -56,10 +71,10 @@ export default function PlanCard({
 
       <div className="plan-buttons">
         <button onClick={() => startCheckout(monthlyPriceId)}>
-          Monatlich
+          ${isPremium ? "99,00 € / Monat | mtl. kündb." : "49,00 € / Monat | mtl. kündb."}
         </button>
         <button onClick={() => startCheckout(yearlyPriceId)}>
-          Jährlich
+          ${isPremium ? "950,40 € / Jahr | - 20% | jährl. kündb." : "529,20 € / Jahr | - 10% | jährl. kündb."}
         </button>
       </div>
     </div>
