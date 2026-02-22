@@ -80,7 +80,8 @@ export default function PlanCard({
         <button onClick={() => startCheckout(yearlyPriceId)}>
           ${yrlPrice}
         </button>
-
+      </div>
+      <div>
         <ul> Preis mtl. ist mtl. kündbar.</ul>
         <ul> Preis jährl. ist jährl. kündbar.</ul>
         <ul> Action: 10% auf den Standard Trader jährl. / 20% Premium Trader jährl.</ul>
