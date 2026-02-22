@@ -82,8 +82,8 @@ export default function PlanCard({
         </button>
       </div>
       <div>
-        <ul> Preis mtl. ist mtl. kündbar.</ul>
-        <ul> Preis jährl. ist jährl. kündbar.</ul>
+        <ul> Preis mtl. ist mtl. kündbar. /n Preis jährl. ist jährl. kündbar.</ul>
+        <ul> </ul>
         <ul> Action: 10% auf den Standard Trader jährl. / 20% Premium Trader jährl.</ul>
       </div>
     </div>
