@@ -51,15 +51,24 @@ export default function PlanCard({
   const mtlPrice = isPremium ? "99,00 € / Monat*" : "49,00 € / Monat*"
   const yrlPrice = isPremium ? "950,40 € / Jahr*" : "529,20 € / Jahr*"
 
+  const badgeImage = isPremium
+  ? "/images/premium.png"
+  : "/images/standard.png";
+
+const badgeAlt = isPremium
+  ? "Premium Trader"
+  : "Standard Trader";
+
+
   return (
     <div className={`plan-card ${isPremium ? "premium" : "standard"}`}>
       <div className="plan-header-wrapper">
   <div className={`plan-badge ${isPremium ? "premium" : "standard"}`}>
     
    <span className="badge-icon">
-  <Image
-    src="/images/standard.png"
-    alt="Standard Trader"
+    <Image
+    src="{badgeImage}"
+    alt="{badgeAlt}"
     width={18}
     height={18}
   />
