@@ -18,20 +18,20 @@ export default function PremiumPage() {
       type="standard"
       title="Standard Trader"
       features={[
-        <> <Image src="/images/check.png" width={19} height={19} alt="" />
+        <> <Image src="/images/check.png" width={20} height={20} alt="" />
           {" "} 17/25 Realtime-Signale
         </>,
-        <> <Image src="/images/check.png" width={19} height={19} alt="" />
+        <> <Image src="/images/check.png" width={20} height={20} alt="" />
           {" "} Equity-Kurve | €/%, Long/Short- und Asset Filter
         </>,
-        <> <Image src="/images/check.png" width={19} height={19} alt="" />
+        <> <Image src="/images/check.png" width={20} height={20} alt="" />
           {" "} Statistik | Basis-Performance
         </>,
         <> {" "} Winrate, Trades & Advanced Analyse
         </>,
         <> {" "} Profit Factor, Max DrowDown
         </>,
-        <> <Image src="/images/check.png" width={19} height={19} alt="" />
+        <> <Image src="/images/check.png" width={20} height={20} alt="" />
           {" "} Tradedetails | Entry, Stop, TP
         </>
       ]}
