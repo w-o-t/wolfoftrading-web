@@ -84,6 +84,7 @@ export default function PlanCard({
           ${yrlPrice}
         </button>
       </div>
+      <CheckIcon className='feature-icon'/>
       <div>
         <ul> * Preis mtl. ist mtl. und jährl. ist jährl. kündbar. | Aktion: 10% auf den Standard Trader jährl. / 20% Premium Trader jährl.</ul>
       </div>
