@@ -12,8 +12,9 @@ export default async function LocaleLayout({
 
   const { locale } = await params;
 
-  const messages = await getMessages({ locale });
-
+  //const messages = await getMessages({ locale });
+  const messages = {};
+  
   return (
     <html lang={locale}>
       <body>
