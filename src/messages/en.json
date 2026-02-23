@@ -1,0 +1,9 @@
+{
+  "pricing": {
+    "standard": "Standard Trader",
+    "premium": "Premium Trader",
+    "month": "Month",
+    "year": "Year",
+    "moreInfo": "More Information"
+  }
+}

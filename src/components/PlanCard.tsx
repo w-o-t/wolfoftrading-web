@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
 console.log("PLAN LOADED");
 type PlanCardProps = {
@@ -21,6 +22,7 @@ export default function PlanCard({
   userId,
 }: PlanCardProps) {
   const isPremium = type === "premium";
+  const t = useTranslations('pricing');
 
   const startCheckout = async (priceId: string) => {
     if (!userId) {
@@ -48,8 +50,8 @@ export default function PlanCard({
     window.location.href = data.url;
   };
 
-  const mtlPrice = isPremium ? "99,00 € / Monat*" : "49,00 € / Monat*"
-  const yrlPrice = isPremium ? "950,40 € / Jahr*" : "529,20 € / Jahr*"
+  const mtlPrice = isPremium ? "99,00 € / {t.('month')}*" : "49,00 € / {t.('month')}*"
+  const yrlPrice = isPremium ? "950,40 € / {t.('year')}*" : "529,20 € / {t.('year')}*"
 
   const badgeImage = isPremium
   ? "/images/premium.png"
