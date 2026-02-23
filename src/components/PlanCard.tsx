@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 
 console.log("PLAN LOADED");
 type PlanCardProps = {
@@ -55,18 +56,15 @@ export default function PlanCard({
       <div className="plan-header-wrapper">
   <div className={`plan-badge ${isPremium ? "premium" : "standard"}`}>
     
-    <span className="badge-icon">
-      <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className="badge-icon"
-  >
-    <path d="M12 2l2.39 4.84L20 7.27l-4 3.89.94 5.48L12 14.77l-4.94 2.87L8 11.16 4 7.27l5.61-.43L12 2z" />
-  </svg>
-    </span>
+   <span className="badge-icon">
+  <Image
+    src="/images/standard-badge.png"
+    alt="Standard Trader"
+    width={18}
+    height={18}
+  />
+</span>
+
     <span>{title}</span>
   </div>
 </div>      
