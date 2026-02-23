@@ -101,7 +101,7 @@ body {
   border: none;
   background: var(--button-bg);
   color: var(--text2);
-  font-weight: 800;
+  font-weight: 650;
   cursor: pointer;
 }
 
