@@ -1,6 +1,6 @@
 "use client";
 
-import CheckIcon from "@mui/icons-material/Check";
+
 console.log("PLAN LOADED");
 type PlanCardProps = {
   type: "standard" | "premium";
@@ -86,7 +86,6 @@ export default function PlanCard({
       </div>
       
       <div>
-        <li><CheckIcon className='feature-icon'/></li>
         <ul> * Preis mtl. ist mtl. und jährl. ist jährl. kündbar. | Aktion: 10% auf den Standard Trader jährl. / 20% Premium Trader jährl.</ul>
       </div>
     </div>
