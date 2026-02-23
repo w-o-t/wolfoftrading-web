@@ -12,12 +12,12 @@ export default function PremiumPage() {
 
   return (
   <div className={`page-wrapper ${theme} standard`}>
-
+<CheckIcon className='feature-icon'/>
     <PlanCard
       type="standard"
       title="Standard Trader"
       features={[
-         "<CheckIcon className='feature-icon'/> 17/25 Realtime-Signale",
+         "✔️ 17/25 Realtime-Signale",
                             "✔️ Equity-Kurve | €/%, Long/Short- und Asset Filter",
                             "✔️ Statistik | Basis-Performance",
                             " Winrate, Trades & Advanced Analyse",
