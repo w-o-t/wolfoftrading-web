@@ -58,7 +58,7 @@ export default function PlanCard({
     
    <span className="badge-icon">
   <Image
-    src="/images/standard-badge.png"
+    src="/images/standard.png"
     alt="Standard Trader"
     width={18}
     height={18}
