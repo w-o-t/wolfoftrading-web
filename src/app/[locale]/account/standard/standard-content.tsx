@@ -3,6 +3,8 @@
 import { useSearchParams } from "next/navigation";
 import PlanCard from "../../../../components/PlanCard";
 import CheckIcon from "@mui/icons-material/Check";
+console.log("MONTHLY:", process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY);
+console.log("YEARLY:", process.env.NEXT_PUBLIC_PRICE_STANDARD_YEARLY);
 
 export default function PremiumPage() {
   const searchParams = useSearchParams();
