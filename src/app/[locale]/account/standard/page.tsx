@@ -1,5 +1,5 @@
 "use client";
-
+console.log ("SUPABASE: ", process.env.NEXT_PUBLIC_SUPABASE_URL)
 import { Suspense } from "react";
 import StandardContent from "./standard-content";
 
