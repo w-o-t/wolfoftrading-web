@@ -8,6 +8,12 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.feature-icon {
+  font-size: 18px;
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
 /* === THEME VARS === */
 .page-wrapper.light.premium {
   --bg: #ede5d8;

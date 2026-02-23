@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import PlanCard from "../../../components/PlanCard";
+import CheckIcon from "@mui/icons-material/Check";
 
 export default function PremiumPage() {
   const searchParams = useSearchParams();
@@ -16,7 +17,7 @@ export default function PremiumPage() {
       type="standard"
       title="Standard Trader"
       features={[
-        "✔️ 17/25 Realtime-Signale",
+         "<CheckIcon className='feature-icon'/> 17/25 Realtime-Signale",
                             "✔️ Equity-Kurve | €/%, Long/Short- und Asset Filter",
                             "✔️ Statistik | Basis-Performance",
                             " Winrate, Trades & Advanced Analyse",
