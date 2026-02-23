@@ -12,7 +12,6 @@ export default function PremiumPage() {
 
   return (
   <div className={`page-wrapper ${theme} standard`}>
-    <li><CheckIcon className='feature-icon'/></li>
     <PlanCard
       type="standard"
       title="Standard Trader"
