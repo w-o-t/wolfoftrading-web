@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import {useTranslations} from 'next-intl';
+import { ReactNode } from "react";
 
 console.log("PLAN LOADED");
 type PlanCardProps = {
   type: "standard" | "premium";
   title: string;
-  features: string[];
+  features: ReactNode[];
   monthlyPriceId: string;
   yearlyPriceId: string;
   userId: string | null;
