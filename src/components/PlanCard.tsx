@@ -90,13 +90,10 @@ const badgeAlt = isPremium
     <span>{title}</span>
   </div>
 </div>      
-      <ul className="features">
-              {features.map((feature, index) => (
-                <li key={index} className="feature-item">
-                  <span className="icon">🔥</span>
-                  <span className="text">{feature}</span>
-                </li>
-              ))}
+      <ul className="plan-list">
+        {features.map((f, i) => (
+          <li key={i}>{f}</li>
+        ))}
       </ul>
 
       <div className="plan-buttons">
