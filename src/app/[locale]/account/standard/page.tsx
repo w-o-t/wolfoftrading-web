@@ -1,12 +1,11 @@
-"use client";
-console.log ("SUPABASE: ", process.env.NEXT_PUBLIC_SUPABASE_URL)
-import { Suspense } from "react";
-import StandardContent from "./standard-content";
+export default async function StandardPage({
+  searchParams
+}: {
+  searchParams: Promise<{ uid?: string }>
+}) {
+  const { uid } = await searchParams;
 
-export default function StandardPage() {
-  return (
-    <Suspense fallback={<div>Lade...</div>}>
-      <StandardContent />
-    </Suspense>
-  );
+  console.log("UID:", uid);
+
+  return <div>Standard Plan</div>;
 }
