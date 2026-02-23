@@ -1,11 +1,11 @@
+import StandardContent from "./standard-content";
+
 export default async function StandardPage({
   searchParams
 }: {
-  searchParams: Promise<{ uid?: string }>
+  searchParams: Promise<{ uid?: string; theme?: string }>
 }) {
-  const { uid } = await searchParams;
+  await searchParams; // nur damit Next 15 zufrieden ist
 
-  console.log("UID:", uid);
-
-  return <div>Standard Plan</div>;
+  return <StandardContent />;
 }
