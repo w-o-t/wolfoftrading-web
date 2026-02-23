@@ -50,8 +50,14 @@ export default function PlanCard({
     window.location.href = data.url;
   };
 
-  const mtlPrice = isPremium ? "99,00 € / {t.('month')}*" : "49,00 € / {t.('month')}*"
-  const yrlPrice = isPremium ? "950,40 € / {t.('year')}*" : "529,20 € / {t.('year')}*"
+ const mtlPrice = isPremium
+  ? `99,00 € / ${t('month')}*`
+  : `49,00 € / ${t('month')}*`;
+
+const yrlPrice = isPremium
+  ? `950,40 € / ${t('year')}*`
+  : `529,20 € / ${t('year')}*`;
+
 
   const badgeImage = isPremium
   ? "/images/premium.png"
@@ -74,7 +80,7 @@ const badgeAlt = isPremium
    <span className="badge-icon">
     <Image
     src={badgeImages[isPremium ? "premium" : "standard"]}
-    alt="{badgeAlt}"
+    alt={badgeAlt}
     width={22}
     height={22}
   />
