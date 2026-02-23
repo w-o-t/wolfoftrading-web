@@ -59,6 +59,10 @@ const badgeAlt = isPremium
   ? "Premium Trader"
   : "Standard Trader";
 
+  const badgeImages = {
+    premium: "/images/premium.png",
+    standard: "/images/standard.png",
+  }
 
   return (
     <div className={`plan-card ${isPremium ? "premium" : "standard"}`}>
@@ -67,7 +71,7 @@ const badgeAlt = isPremium
     
    <span className="badge-icon">
     <Image
-    src="{badgeImage}"
+    src={badgeImages[isPremium ? "premium" : "standard"]}
     alt="{badgeAlt}"
     width={18}
     height={18}
