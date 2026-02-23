@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import PlanCard from "../../../components/PlanCard";
-import CheckIcon from "@mui/icons-material/Check";
+
 
 export default function PremiumPage() {
   const searchParams = useSearchParams();
@@ -12,7 +12,6 @@ export default function PremiumPage() {
 
   return (
   <div className={`page-wrapper ${theme} standard`}>
-<CheckIcon className='feature-icon'/>
     <PlanCard
       type="standard"
       title="Standard Trader"
