@@ -15,7 +15,7 @@ export default function PremiumPage() {
       features={[
         "25/25 Realtime-Signale",
         "Equity-Kurve & Profi Analytics",
-        "€/% , Long/Short- und Asset Filter, Headmap, DD Analyse, Recovery Factor, Sharpe Ratio, Expectancy uvm.",
+        "€/% , Long/Short- und Asset Filter, Headmap, DD Analyse, /nRecovery Factor, Sharpe Ratio, Expectancy uvm.",
         "DD Analyse, Recovery Factor, Sharpe Ratio, Expectancy uvm.",
         "Statistik",
         "Equity-Kurve & Profi Analytics",
