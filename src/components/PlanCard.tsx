@@ -97,7 +97,7 @@ const badgeAlt = isPremium
       </div>
        <div>
         <ul> </ul>
-        <ul className="plan-list-short"> * Preis mtl. ist mtl. und jährl. ist jährl. kündbar. | Aktion: 10% auf den Standard Trader jährl. / 20% Premium Trader jährl.</ul>
+        <ul className="plan-list-short"> * Preis mtl. = mtl. und jährl. = jährl. kündbar. | Aktion: -10% Standard Trader jährl. / -20% Premium Trader jährl.</ul>
       </div>
     </div>
    
