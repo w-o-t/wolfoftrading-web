@@ -54,7 +54,7 @@ export default function PlanCard({
     <div className={`plan-card ${isPremium ? "premium" : "standard"}`}>
       <div className="plan-header-wrapper">
   <div className={`plan-badge ${isPremium ? "premium" : "standard"}`}>
-    <CheckIcon className='feature-icon'/>
+    
     <span className="badge-icon">
       <svg
     xmlns="http://www.w3.org/2000/svg"
