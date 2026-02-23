@@ -52,12 +52,12 @@ export default function PlanCard({
   };
 
  const mtlPrice = isPremium
-  ? "99,00 € / ${t('month')}*"
-  : "49,00 € / ${t('month')}*";
+  ? `99,00 € / ${t('month')}*`
+  : `49,00 € / ${t('month')}*`;
 
 const yrlPrice = isPremium
-  ? "950,40 € / ${t('year')}*"
-  : "529,20 € / ${t('year')}*";
+  ? `950,40 € / ${t('year')}*`
+  : `529,20 € / ${t('year')}*`;
 
 
   const badgeImage = isPremium
@@ -98,10 +98,10 @@ const badgeAlt = isPremium
 
       <div className="plan-buttons">
         <button onClick={() => startCheckout(monthlyPriceId)}>
-          ${mtlPrice}
+          {mtlPrice}
         </button>
         <button onClick={() => startCheckout(yearlyPriceId)}>
-          ${yrlPrice}
+          {yrlPrice}
         </button>
       </div>
        <div>
