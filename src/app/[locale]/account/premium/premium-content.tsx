@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import PlanCard from "../../../components/PlanCard";
+import PlanCard from "../../../../components/PlanCard";
 
 export default function PremiumPage() {
   const searchParams = useSearchParams();

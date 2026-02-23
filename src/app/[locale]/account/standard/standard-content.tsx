@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import PlanCard from "../../../components/PlanCard";
+import PlanCard from "../../../../components/PlanCard";
 import CheckIcon from "@mui/icons-material/Check";
 
 export default function PremiumPage() {
