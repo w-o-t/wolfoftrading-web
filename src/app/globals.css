@@ -95,7 +95,7 @@ body {
 
 .plan-list li {
   margin-bottom: 10px;
-  line-height: 1;
+  line-height: 0.8;
 }
 
 .plan-buttons {
