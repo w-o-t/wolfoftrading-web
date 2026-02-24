@@ -34,7 +34,7 @@ export default function PremiumPage() {
                   subtitle: "Entry, Stop, TP & Realtime-Charts"
                 },
                 {
-                  title: "Priorisierte Pushes von professionellen Tradern",
+                  title: "Pushes von professionellen Tradern",
                   subtitle: ""
                 },
                 {

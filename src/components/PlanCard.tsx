@@ -97,14 +97,21 @@ const badgeAlt = isPremium
       <ul className="plan-list">
         {features.map((f, i) => (
           <li key={i} className="plan-feature">
-            <div className="feature-title">🔥 {f.title}</div>
+            <div className="feature-title">
+              <span className="feature-icon">
+                {isPremium ? "🔥" : "✔️"}
+              </span>
+              <span>{f.title}</span>
+            </div>
+
             {f.subtitle && (
-              <div className="feature-subtitle">{f.subtitle}</div>
+              <div className="feature-subtitle">
+                {f.subtitle}
+              </div>
             )}
           </li>
         ))}
       </ul>
-
 
       <div className="plan-buttons">
         <button onClick={() => startCheckout(monthlyPriceId)}>
