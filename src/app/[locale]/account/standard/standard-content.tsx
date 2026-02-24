@@ -18,22 +18,22 @@ export default function PremiumPage() {
       type="standard"
       title="Standard Trader"
       features={[
-        <> <Image src="/images/check.png" width={20} height={20} alt="" />
-          {" "} 17/25 Realtime-Signale
-        </>,
-        <> <Image src="/images/check.png" width={20} height={20} alt="" />
-          {" "} Equity-Kurve | €/%, Long/Short- und Asset Filter
-        </>,
-        <> <Image src="/images/check.png" width={20} height={20} alt="" />
-          {" "} Statistik | Basis-Performance
-        </>,
-        <> {" "} Winrate, Trades & Advanced Analyse
-        </>,
-        <> {" "} Profit Factor, Max DrowDown
-        </>,
-        <> <Image src="/images/check.png" width={20} height={20} alt="" />
-          {" "} Tradedetails | Entry, Stop, TP
-        </>
+                {
+                  title: "17/25 Realtime-Signale",
+                  subtitle: ""
+                },
+                {
+                  title: "Equity-Kurve",
+                  subtitle: "€/%, Long/Short- und Asset Filter"
+                },
+                {
+                  title: "Statistik | Basis-Performance",
+                  subtitle: "Winrate, Trades & Advanced Analyse, Profit Factor, Max DrowDown"
+                },
+                {
+                  title: "Tradedetails | Entry, Stop, TP",
+                  subtitle: ""
+                },
       ]}
       monthlyPriceId={process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY!}
       yearlyPriceId={process.env.NEXT_PUBLIC_PRICE_STANDARD_YEARLY!}

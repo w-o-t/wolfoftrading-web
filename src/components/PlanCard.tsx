@@ -4,11 +4,15 @@ import Image from "next/image";
 import {useTranslations} from 'next-intl';
 import { ReactNode } from "react";
 
+type FeatureItem = {
+  title: string;
+  subtitle?: string;
+}
 console.log("PLAN LOADED");
 type PlanCardProps = {
   type: "standard" | "premium";
   title: string;
-  features: ReactNode[];
+  features: FeatureItem[];
   monthlyPriceId: string;
   yearlyPriceId: string;
   userId: string | null;
@@ -92,9 +96,15 @@ const badgeAlt = isPremium
 </div>      
       <ul className="plan-list">
         {features.map((f, i) => (
-          <li key={i}>{f}</li>
+          <li key={i} className="plan-feature">
+            <div className="feature-title">🔥 {f.title}</div>
+            {f.subtitle && (
+              <div className="feature-subtitle">{f.subtitle}</div>
+            )}
+          </li>
         ))}
       </ul>
+
 
       <div className="plan-buttons">
         <button onClick={() => startCheckout(monthlyPriceId)}>
