@@ -82,8 +82,8 @@ const badgeAlt = isPremium
     <Image
     src={badgeImages[isPremium ? "premium" : "standard"]}
     alt={badgeAlt}
-    width={30}
-    height={20}
+    width={22}
+    height={22}
   />
 </span>
 
