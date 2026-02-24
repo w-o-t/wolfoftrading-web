@@ -17,7 +17,7 @@ body {
 /* === THEME VARS === */
 .page-wrapper.light.premium {
   --bg: #ede5d8;
-  --card-bg: #1db9541c;
+  --card-bg: #f1eedd;
   --button-bg: #e7e0d5;
   --text: #241d14;
   --text2: #88704b;
@@ -25,7 +25,7 @@ body {
 
 .page-wrapper.light.standard {
   --bg: #ede5d8;
-  --card-bg: #f39d121f;
+  --card-bg: #fcedd8;
   --button-bg: #e7e0d5;
   --text: #5a482e;
   --text2: #88704b;
@@ -33,7 +33,7 @@ body {
 
 .page-wrapper.dark.standard {
   --bg: #222222;
-  --card-bg: #f39d121f;
+  --card-bg: #2b251c;
   --button-bg: #222222;
   --text: rgba(255,255,255,0.95);
   --text2: #88704b;
@@ -41,7 +41,7 @@ body {
 
 .page-wrapper.dark.premium {
   --bg: #222222;
-  --card-bg: #1db9541c;
+  --card-bg: #202621;
   --button-bg: #222222;
   --text: rgba(255,255,255,0.95);
   --text2: #88704b;
