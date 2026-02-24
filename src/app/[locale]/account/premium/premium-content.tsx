@@ -26,12 +26,12 @@ export default function PremiumPage() {
                   subtitle: "Highend- und UltraProp Analytics Winrate, Trades, Profit Factor, Max DrowDown uvm."
                 },
                 {
-                  title: "Signal-Historie",
-                  subtitle: "Datums-, Asset-, Statussuche."
-                },
-                {
                   title: "Tradedetails",
                   subtitle: "Entry, Stop, TP & Realtime-Charts"
+                },
+                {
+                  title: "Signal-Historie",
+                  subtitle: "Datums-, Asset-, Statussuche."
                 },
                 {
                   title: "Pushes von professionellen Tradern",
