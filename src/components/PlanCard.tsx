@@ -29,24 +29,32 @@ export default function PlanCard({
   const isPremium = type === "premium";
   const t = useTranslations('pricing');
 
-  const startCheckout = async (priceId: string) => {
+ const startCheckout = async (priceId: string) => {
+
     if (!userId) {
       alert("User ID fehlt");
       return;
     }
-  
-    
+
+    // 🔥 Hier kannst du deinen Promo-Code fest eintragen
+    const promoCode = "hY6C89zZ"; 
+    // Oder null wenn keiner
 
     const res = await fetch(
       process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL!,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ priceId, userId }),
+        body: JSON.stringify({
+          priceId,
+          userId,
+          promoCode, // 🔥 HIER WIRD ER MITGESENDET
+        }),
       }
     );
 
     const data = await res.json();
+
     if (!data.url) {
       alert("Stripe konnte nicht gestartet werden.");
       return;
@@ -54,6 +62,7 @@ export default function PlanCard({
 
     window.location.href = data.url;
   };
+
 
  const mtlPrice = isPremium
   ? `99,00 € / ${t('month')}*`
