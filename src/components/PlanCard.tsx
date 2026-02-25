@@ -36,8 +36,13 @@ export default function PlanCard({
       return;
     }
 
+    const promoCode = "";
     // 🔥 Hier kannst du deinen Promo-Code fest eintragen
-    const promoCode = ""; 
+    if(priceId == process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY
+        || priceId == process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY
+    ){
+      const promoCode = "promo_1T4fZf5GSZct2YtwXfIGJECs";
+    }
     // Oder null wenn keiner
 
     const res = await fetch(
