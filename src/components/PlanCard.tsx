@@ -41,7 +41,7 @@ export default function PlanCard({
     if(priceId == process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY
         || priceId == process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY
     ){
-      promoCode = "promo_1T4fZf5GSZct2YtwXfIGJECs";
+      //promoCode = "promo_1T4fZf5GSZct2YtwXfIGJECs";
     }
     // Oder null wenn keiner
 
