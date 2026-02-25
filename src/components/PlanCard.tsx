@@ -37,7 +37,7 @@ export default function PlanCard({
     }
 
     // 🔥 Hier kannst du deinen Promo-Code fest eintragen
-    const promoCode = "hY6C89zZ"; 
+    const promoCode = "promo_1T4fZf5GSZct2YtwXfIGJECs"; 
     // Oder null wenn keiner
 
     const res = await fetch(
