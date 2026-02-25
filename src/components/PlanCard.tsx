@@ -38,8 +38,8 @@ export default function PlanCard({
 
     const promoCode = "";
     // 🔥 Hier kannst du deinen Promo-Code fest eintragen
-    if(priceId == process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY
-        || priceId == process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY
+    if(priceId == process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY?.toString()
+        || priceId == process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY?.toString()
     ){
       const promoCode = "promo_1T4fZf5GSZct2YtwXfIGJECs";
     }
