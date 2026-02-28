@@ -126,24 +126,23 @@ export default function PlanCard({
         ))}
       </ul>
 
-      {/* PRICING OPTIONS */}
+      {/* PRICING */}
       <div className="pricing-options">
 
         {/* MONTHLY */}
         <div
-          className={`price-card ${selectedPlan === "monthly" ? "active" : ""}`}
+          className={`price-option ${selectedPlan === "monthly" ? "selected" : ""}`}
           onClick={() => setSelectedPlan("monthly")}
         >
           <div className="discount-badge">
             30% OFF – nur im ersten Monat
           </div>
 
-          <div className="left">
-            <div className="radio">
-              {selectedPlan === "monthly" ? "✔" : ""}
+          <div className="option-left">
+            <div className="option-radio">
+              {selectedPlan === "monthly" ? "●" : ""}
             </div>
-
-            <div className="plan-name">
+            <div className="option-text">
               {mtlPrice}
             </div>
           </div>
@@ -151,23 +150,22 @@ export default function PlanCard({
 
         {/* YEARLY */}
         <div
-          className={`price-card ${selectedPlan === "yearly" ? "active" : ""}`}
+          className={`price-option ${selectedPlan === "yearly" ? "selected" : ""}`}
           onClick={() => setSelectedPlan("yearly")}
         >
-          <div className="left">
-            <div className="radio">
-              {selectedPlan === "yearly" ? "✔" : ""}
+          <div className="option-left">
+            <div className="option-radio">
+              {selectedPlan === "yearly" ? "●" : ""}
             </div>
-
-            <div className="plan-name">
+            <div className="option-text">
               {yrlPrice}
             </div>
           </div>
         </div>
 
-        {/* CHECKOUT BUTTON */}
+        {/* BUTTON */}
         <button
-          className="checkout-button"
+          className="plan-main-button"
           onClick={() =>
             startCheckout(
               selectedPlan === "monthly" ? monthlyPriceId : yearlyPriceId
