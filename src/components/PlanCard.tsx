@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import {useTranslations} from 'next-intl';
-import { ReactNode } from "react";
+import {useTranslations} from "next-intl";
+import { useState } from "react";
 
 type FeatureItem = {
   title: string;
   subtitle?: string;
-}
-console.log("PLAN LOADED");
+};
+
 type PlanCardProps = {
   type: "standard" | "premium";
   title: string;
@@ -26,10 +26,13 @@ export default function PlanCard({
   yearlyPriceId,
   userId,
 }: PlanCardProps) {
-  const isPremium = type === "premium";
-  const t = useTranslations('pricing');
 
- const startCheckout = async (priceId: string) => {
+  const isPremium = type === "premium";
+  const t = useTranslations("pricing");
+
+  const [selectedPlan, setSelectedPlan] = useState<"monthly" | "yearly">("monthly");
+
+  const startCheckout = async (priceId: string) => {
 
     if (!userId) {
       alert("User ID fehlt");
@@ -37,13 +40,13 @@ export default function PlanCard({
     }
 
     let promoCode: string | null = null;
-    // 🔥 Hier kannst du deinen Promo-Code fest eintragen
-    if(priceId == process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY
-        || priceId == process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY
-    ){
-      //promoCode = "promo_1T4fZf5GSZct2YtwXfIGJECs";
+
+    if (
+      priceId == process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY ||
+      priceId == process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY
+    ) {
+      // promoCode = "promo_XXXXX";
     }
-    // Oder null wenn keiner
 
     const res = await fetch(
       process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL!,
@@ -53,7 +56,7 @@ export default function PlanCard({
         body: JSON.stringify({
           priceId,
           userId,
-          promoCode, // 🔥 HIER WIRD ER MITGESENDET
+          promoCode,
         }),
       }
     );
@@ -68,46 +71,42 @@ export default function PlanCard({
     window.location.href = data.url;
   };
 
+  const mtlPrice = isPremium
+    ? `99,00 € / ${t("month")}*`
+    : `49,00 € / ${t("month")}*`;
 
- const mtlPrice = isPremium
-  ? `99,00 € / ${t('month')}*`
-  : `49,00 € / ${t('month')}*`;
-
-const yrlPrice = isPremium
-  ? `950,40 € / ${t('year')}*`
-  : `529,20 € / ${t('year')}*`;
-
-
-  const badgeImage = isPremium
-  ? "/images/premium.png"
-  : "/images/standard.png";
-
-const badgeAlt = isPremium
-  ? "Premium Trader"
-  : "Standard Trader";
+  const yrlPrice = isPremium
+    ? `950,40 € / ${t("year")}*`
+    : `529,20 € / ${t("year")}*`;
 
   const badgeImages = {
     premium: "/images/premium.png",
     standard: "/images/standard.png",
-  }
+  };
+
+  const badgeAlt = isPremium
+    ? "Premium Trader"
+    : "Standard Trader";
 
   return (
     <div className={`plan-card ${isPremium ? "premium" : "standard"}`}>
-      <div className="plan-header-wrapper">
-  <div className={`plan-badge ${isPremium ? "premium" : "standard"}`}>
-    
-   <span className="badge-icon">
-    <Image
-    src={badgeImages[isPremium ? "premium" : "standard"]}
-    alt={badgeAlt}
-    width={22}
-    height={22}
-  />
-</span>
 
-    <span>{title}</span>
-  </div>
-</div>      
+      {/* HEADER */}
+      <div className="plan-header-wrapper">
+        <div className={`plan-badge ${isPremium ? "premium" : "standard"}`}>
+          <span className="badge-icon">
+            <Image
+              src={badgeImages[isPremium ? "premium" : "standard"]}
+              alt={badgeAlt}
+              width={22}
+              height={22}
+            />
+          </span>
+          <span>{title}</span>
+        </div>
+      </div>
+
+      {/* FEATURES */}
       <ul className="plan-list">
         {features.map((f, i) => (
           <li key={i} className="plan-feature">
@@ -127,19 +126,63 @@ const badgeAlt = isPremium
         ))}
       </ul>
 
-      <div className="plan-buttons">
-        <button onClick={() => startCheckout(monthlyPriceId)}>
-          {mtlPrice}
+      {/* PRICING OPTIONS */}
+      <div className="pricing-options">
+
+        {/* MONTHLY */}
+        <div
+          className={`price-card ${selectedPlan === "monthly" ? "active" : ""}`}
+          onClick={() => setSelectedPlan("monthly")}
+        >
+          <div className="discount-badge">
+            30% OFF – nur im ersten Monat
+          </div>
+
+          <div className="left">
+            <div className="radio">
+              {selectedPlan === "monthly" ? "✔" : ""}
+            </div>
+
+            <div className="plan-name">
+              {mtlPrice}
+            </div>
+          </div>
+        </div>
+
+        {/* YEARLY */}
+        <div
+          className={`price-card ${selectedPlan === "yearly" ? "active" : ""}`}
+          onClick={() => setSelectedPlan("yearly")}
+        >
+          <div className="left">
+            <div className="radio">
+              {selectedPlan === "yearly" ? "✔" : ""}
+            </div>
+
+            <div className="plan-name">
+              {yrlPrice}
+            </div>
+          </div>
+        </div>
+
+        {/* CHECKOUT BUTTON */}
+        <button
+          className="checkout-button"
+          onClick={() =>
+            startCheckout(
+              selectedPlan === "monthly" ? monthlyPriceId : yearlyPriceId
+            )
+          }
+        >
+          Jetzt buchen
         </button>
-        <button onClick={() => startCheckout(yearlyPriceId)}>
-          {yrlPrice}
-        </button>
+
       </div>
-       <div>
-        <ul> </ul>
-        <ul className="plan-list-short"> {t('coupon')}</ul>
-      </div>
+
+      <ul className="plan-list-short">
+        {t("coupon")}
+      </ul>
+
     </div>
-   
   );
 }
