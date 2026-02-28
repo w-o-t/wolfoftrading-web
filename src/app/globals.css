@@ -283,7 +283,7 @@ body {
   position: relative;
   padding: 18px 20px;
   border-radius: 16px;
-  background: rgb(121, 119, 119);
+  background: #1e1e1e;
   border: 1px solid #2c2c2c;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -333,8 +333,8 @@ body {
   position: absolute;
   top: -10px;
   right: 16px;
-  background: white;
-  color: rgb(114, 113, 113);
+  background: #575757;
+  color: #857150;
   font-size: 11px;
   padding: 4px 10px;
   border-radius: 999px;
