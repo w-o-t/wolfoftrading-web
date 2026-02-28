@@ -4,6 +4,27 @@
     "premium": "Premium Trader",
     "month": "Month",
     "year": "Year",
-    "moreInfo": "More Information"
+    "moreInfo": "More Information",
+    
+    "upgradeBottomSheetStandardText1":"✔️ 17/25 Real-time signals",
+    "upgradeBottomSheetStandardText2":"✔️ Equity curve | €/%, long/short and asset filters",
+    "upgradeBottomSheetStandardText3":"✔️ Statistics | Basic Performance",
+    "upgradeBottomSheetStandardText4":" Winrate, Trades & Advanced Analysis, Profit Factor, Max DrowDown",
+    "upgradeBottomSheetStandardText6":"✔️ Trade details | Entry, Stop, TP",
+
+    "upgradeBottomSheetPremiumText1":"🔥 25/25 Real-time signals",
+    "upgradeBottomSheetPremiumText2":"🔥 Equity curve & professional analytics",
+    "upgradeBottomSheetPremiumText3":" €/%, long/short and asset filter, headmap,",
+    "upgradeBottomSheetPremiumText4":" DD analysis, recovery factor, Sharpe ratio, expectancy and much more.",
+    "upgradeBottomSheetPremiumText5":"🔥 Statistics",
+    "upgradeBottomSheetPremiumText6":" High-end and UltraProp Analytics",
+    "upgradeBottomSheetPremiumText7":" Winrate, trades, profit factor, Max DrowDown and much more.",
+    "upgradeBottomSheetPremiumText8":"🔥 Signal history",
+    "upgradeBottomSheetPremiumText9":" Date, asset, and status search.",
+    "upgradeBottomSheetPremiumText10":"🔥 Trade details",
+    "upgradeBottomSheetPremiumText11":" Entry, Stop, TP & Realtime Charts",
+    "upgradeBottomSheetPremiumText12":"🔥 Pushes from professional traders",
+    "upgradeBottomSheetPremiumText13":"🔥 EA Copy Trading 🔥",
+    "upgradeBottomSheetPremiumText14":" Automated trading via an EA robot"
   }
 }

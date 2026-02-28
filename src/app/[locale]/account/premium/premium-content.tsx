@@ -2,11 +2,14 @@
 
 import { useSearchParams } from "next/navigation";
 import PlanCard from "../../../../components/PlanCard";
+import {useTranslations} from 'next-intl';
 
 export default function PremiumPage() {
   const searchParams = useSearchParams();
   const userId = searchParams.get("uid");
   const theme = searchParams.get("theme") === "dark" ? "dark" : "light";
+  const t = useTranslations('pricing');
+  
   return (
   <div className={`page-wrapper ${theme} premium`}>
     <PlanCard

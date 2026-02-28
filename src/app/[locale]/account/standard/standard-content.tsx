@@ -3,14 +3,14 @@
 import { useSearchParams } from "next/navigation";
 import PlanCard from "../../../../components/PlanCard";
 import CheckIcon from "@mui/icons-material/Check";
-console.log("MONTHLY:", process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY);
-console.log("YEARLY:", process.env.NEXT_PUBLIC_PRICE_STANDARD_YEARLY);
+import {useTranslations} from 'next-intl';
 import Image from "next/image";
 
 export default function PremiumPage() {
   const searchParams = useSearchParams();
   const userId = searchParams.get("uid");
   const theme = searchParams.get("theme") === "dark" ? "dark" : "light";
+  const t = useTranslations('pricing');
 
   return (
   <div className={`page-wrapper ${theme} standard`}>
@@ -19,19 +19,19 @@ export default function PremiumPage() {
       title="Standard Trader"
       features={[
                 {
-                  title: "17/25 Realtime-Signale",
+                  title: t('upgradeBottomSheetStandardText1'),
                   subtitle: ""
                 },
                 {
-                  title: "Equity-Kurve",
-                  subtitle: "€/%, Long/Short- und Asset Filter"
+                  title: t('upgradeBottomSheetStandardText2'),
+                  subtitle: "",
                 },
                 {
-                  title: "Statistik | Basis-Performance",
-                  subtitle: "Winrate, Trades & Advanced Analyse, Profit Factor, Max DrowDown"
+                  title: t('upgradeBottomSheetStandardText3'),
+                  subtitle: t('upgradeBottomSheetStandardText4'),
                 },
                 {
-                  title: "Tradedetails | Entry, Stop, TP",
+                  title: t('upgradeBottomSheetStandardText6'),
                   subtitle: ""
                 },
       ]}
