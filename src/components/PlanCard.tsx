@@ -3,6 +3,7 @@
 import Image from "next/image";
 import {useTranslations} from "next-intl";
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 type FeatureItem = {
   title: string;
@@ -30,6 +31,8 @@ export default function PlanCard({
   const isPremium = type === "premium";
   const t = useTranslations("pricing");
   const [selectedPlan, setSelectedPlan] = useState<"monthly" | "yearly">("monthly");
+  const searchParams = useSearchParams();
+  const theme = searchParams.get("theme") === "dark" ? "" : "light";
 
   const startCheckout = async (priceId: string) => {
 
@@ -168,7 +171,7 @@ export default function PlanCard({
 
         {/* MAIN BUTTON */}
         <button
-          className="pricing-main-button"
+          className={`pricing-main-button ${theme}`}
           onClick={() =>
             startCheckout(
               selectedPlan === "monthly" ? monthlyPriceId : yearlyPriceId
