@@ -140,7 +140,7 @@ export default function PlanCard({
           </div>
 
           <div className="pricing-left">
-            <div className="radio-circle">
+            <div className={`radio-circle ${theme}`}>
               {selectedPlan === "monthly" && <div className="radio-dot" />}
             </div>
             <div className="pricing-text">
@@ -160,7 +160,7 @@ export default function PlanCard({
           </div>
 
           <div className="pricing-left">
-            <div className="radio-circle">
+            <div className={`radio-circle ${theme}`}>
               {selectedPlan === "yearly" && <div className="radio-dot" />}
             </div>
             <div className="pricing-text">

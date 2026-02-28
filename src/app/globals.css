@@ -334,6 +334,17 @@ body {
   justify-content: center;
 }
 
+/* Radio */
+.radio-circle.light {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgb(29, 28, 28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .radio-dot {
   width: 8px;
   height: 8px;
