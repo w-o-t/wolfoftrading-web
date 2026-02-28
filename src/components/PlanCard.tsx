@@ -48,7 +48,7 @@ export default function PlanCard({
           promo = process.env.NEXT_PUBLIC_PROMO_CODE_MONTHLY ?? null;
     }
 
-    const locale = useLocale();
+    const locale = t("locale");
 
     const res = await fetch(
       process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL!,
