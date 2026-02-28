@@ -124,7 +124,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
+  width: 100%;
+  height: 24px; 
   padding: 7px 20px;
   border-radius: 30px;
   font-weight: 600;
@@ -147,6 +148,7 @@ body {
 
 .badge-icon {
   font-size: 18px;
+  
 }
 
 .plan-buttons button {
@@ -420,16 +422,4 @@ body {
 
 .pricing-main-button:hover {
   opacity: 0.9;
-}
-
-.badge-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 24px; /* Höhe anpassen wie du willst */
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.badge-image {
-  object-fit: cover; /* oder contain wenn nichts abgeschnitten werden soll */
 }
