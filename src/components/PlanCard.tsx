@@ -62,8 +62,8 @@ export default function PlanCard({
   };
 
   const mtlPrice = isPremium
-    ? `99,00 € / ${t("month")}*`
-    : `49,00 € / ${t("month")}*`;
+    ? `69,30 € / ${t("month")}*`
+    : `34,30 € / ${t("month")}*`;
 
   const yrlPrice = isPremium
     ? `950,40 € / ${t("year")}*`
