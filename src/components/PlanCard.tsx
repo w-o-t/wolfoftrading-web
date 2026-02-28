@@ -49,7 +49,7 @@ export default function PlanCard({
         body: JSON.stringify({
           priceId,
           userId,
-          promoCode: "TP5Ujjq4",
+          promoCode: "promo_1T5vJB5GSZct2YtwyYow7e0e",
         }),
       }
     );
