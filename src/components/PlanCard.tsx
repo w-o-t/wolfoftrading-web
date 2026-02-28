@@ -56,6 +56,7 @@ export default function PlanCard({
           priceId,
           userId,
           promoCode: promo,
+          locale: t('locale'),
         }),
       }
     );
