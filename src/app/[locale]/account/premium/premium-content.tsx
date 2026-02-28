@@ -9,7 +9,7 @@ export default function PremiumPage() {
   const userId = searchParams.get("uid");
   const theme = searchParams.get("theme") === "dark" ? "dark" : "light";
   const t = useTranslations('pricing');
-  
+
   return (
   <div className={`page-wrapper ${theme} premium`}>
     <PlanCard
@@ -17,32 +17,32 @@ export default function PremiumPage() {
       title="Premium Trader"
       features={[
                 {
-                  title: "25/25 Realtime-Signale",
+                  title: t('upgradeBottomSheetPremiumText1'),
                   subtitle: ""
                 },
                 {
-                  title: "Equity-Kurve & Profi Analytics",
-                  subtitle: "€/% , Long/Short- und Asset Filter, Headmap, DD Analyse, Recovery Factor, Sharpe Ratio, Expectancy uvm."
+                  title: t('upgradeBottomSheetPremiumText2'),
+                  subtitle: t('upgradeBottomSheetPremiumText3'),
                 },
                 {
-                  title: "Statistik",
-                  subtitle: "Highend- und UltraProp Analytics Winrate, Trades, Profit Factor, Max DrowDown uvm."
+                  title: t('upgradeBottomSheetPremiumText5'),
+                  subtitle: t('upgradeBottomSheetPremiumText6'),
                 },
                 {
-                  title: "Tradedetails",
-                  subtitle: "Entry, Stop, TP & Realtime-Charts"
+                  title: t('upgradeBottomSheetPremiumText10'),
+                  subtitle: t('upgradeBottomSheetPremiumText11'),
                 },
                 {
-                  title: "Signal-Historie",
-                  subtitle: "Datums-, Asset-, Statussuche."
+                  title: t('upgradeBottomSheetPremiumText8'),
+                  subtitle: t('upgradeBottomSheetPremiumText9'),
                 },
                 {
-                  title: "Pushes von professionellen Tradern",
+                  title: t('upgradeBottomSheetPremiumText12'),
                   subtitle: ""
                 },
                 {
-                  title: "EA Copytrading",
-                  subtitle: "automatisierter Handel über einen EA Robot"
+                  title: t('upgradeBottomSheetPremiumText13'),
+                  subtitle: t('upgradeBottomSheetPremiumText14'),
                 }
               ]}
 
