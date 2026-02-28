@@ -40,6 +40,12 @@ export default function PlanCard({
       alert("User ID fehlt");
       return;
     }
+    let promo: string | null = null;
+
+    if(priceId == process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY ||
+        priceId == process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY){
+          promo = process.env.PROMO_CODE_MONTHLY ?? null;
+    }
 
     const res = await fetch(
       process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL!,
@@ -49,7 +55,7 @@ export default function PlanCard({
         body: JSON.stringify({
           priceId,
           userId,
-          promoCode: "promo_1T5vOM5GSZct2YtwdmbsKOw4",
+          promoCode: promo,
         }),
       }
     );
