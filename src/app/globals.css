@@ -300,6 +300,10 @@ body {
   transition: all 0.2s ease;
 }
 
+.pricing-box.light:hover {
+  background: #c0b8af;
+}
+
 .pricing-box:hover {
   background: #555555;
 }
