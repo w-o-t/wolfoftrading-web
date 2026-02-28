@@ -135,7 +135,7 @@ export default function PlanCard({
           className={`pricing-box ${selectedPlan === "monthly" ? "active" : ""} ${theme}`}
           onClick={() => setSelectedPlan("monthly")}
         >
-          <div className="discount-badge">
+          <div className={`discount-badge ${theme}`}>
             {mtlBadge}
           </div>
 
@@ -155,7 +155,7 @@ export default function PlanCard({
           onClick={() => setSelectedPlan("yearly")}
         >
 
-          <div className="discount-badge">
+          <div className={`discount-badge ${theme}`}>
             {yrlBadge}
           </div>
 

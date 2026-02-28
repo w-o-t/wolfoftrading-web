@@ -356,6 +356,19 @@ body {
   font-weight: 600;
 }
 
+/* Discount Badge */
+.discount-badge.light {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: #c0b8af;
+  color: #857150;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
 /* Main Button */
 .pricing-main-button {
   margin-top: 12px;
