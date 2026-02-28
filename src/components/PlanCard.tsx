@@ -4,6 +4,7 @@ import Image from "next/image";
 import {useTranslations} from "next-intl";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useLocale } from "next-intl";
 
 type FeatureItem = {
   title: string;
@@ -47,6 +48,8 @@ export default function PlanCard({
           promo = process.env.NEXT_PUBLIC_PROMO_CODE_MONTHLY ?? null;
     }
 
+    const locale = useLocale();
+
     const res = await fetch(
       process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL!,
       {
@@ -56,7 +59,7 @@ export default function PlanCard({
           priceId,
           userId,
           promoCode: promo,
-          locale: t('locale'),
+          locale,
         }),
       }
     );
