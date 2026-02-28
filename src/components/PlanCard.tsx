@@ -104,9 +104,11 @@ export default function PlanCard({
           <span className="badge-icon">
             <Image
               src={badgeImages[isPremium ? "premium" : "standard"]}
+              fill
               alt={badgeAlt}
-              width={22}
-              height={22}
+              className="badge-image"
+              sizes="100vw"
+              priority
             />
           </span>
           <span>{title}</span>
