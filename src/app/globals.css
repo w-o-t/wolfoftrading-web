@@ -309,6 +309,10 @@ body {
 }
 
 .pricing-box.active {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.pricing-box.light.active {
   border: 2px solid rgb(0, 0, 0);
 }
 
