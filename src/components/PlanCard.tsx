@@ -42,8 +42,8 @@ export default function PlanCard({
     }
     let promo: string | null = null;
 
-    if(priceId === process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY ||
-        priceId === process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY){
+    if(priceId === process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY?.toString() ||
+        priceId === process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY?.toString()){
           promo = process.env.PROMO_CODE_MONTHLY ?? null;
     }
 
