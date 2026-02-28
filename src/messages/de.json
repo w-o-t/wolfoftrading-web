@@ -6,26 +6,26 @@
     "year": "Jahr",
     "moreInfo": "Weitere Informationen",
 
-    "upgradeBottomSheetStandardText1":"✔️ 17/25 Realtime-Signale",
-    "upgradeBottomSheetStandardText2":"✔️ Equity-Kurve | €/%, Long/Short- und Asset Filter",
-    "upgradeBottomSheetStandardText3":"✔️ Statistik | Basis-Performance",
+    "upgradeBottomSheetStandardText1":"17/25 Realtime-Signale",
+    "upgradeBottomSheetStandardText2":"Equity-Kurve | €/%, Long/Short- und Asset Filter",
+    "upgradeBottomSheetStandardText3":"Statistik | Basis-Performance",
     "upgradeBottomSheetStandardText4":" Winrate, Trades & Advanced Analyse, Profit Factor, Max DrowDown",
-    "upgradeBottomSheetStandardText6":"✔️ Tradedetails | Entry, Stop, TP",
+    "upgradeBottomSheetStandardText6":"Tradedetails | Entry, Stop, TP",
 
-    "upgradeBottomSheetPremiumText1":"🔥 25/25 Realtime-Signale",
-    "upgradeBottomSheetPremiumText2":"🔥 Equity-Kurve & Profi Analytics",
+    "upgradeBottomSheetPremiumText1":"25/25 Realtime-Signale",
+    "upgradeBottomSheetPremiumText2":"Equity-Kurve & Profi Analytics",
     "upgradeBottomSheetPremiumText3":" €/% , Long/Short- und Asset Filter, Headmap, ",
     "upgradeBottomSheetPremiumText4":" DD Analyse, Recovery Factor, Sharpe Ratio, Expectancy uvm.",
-    "upgradeBottomSheetPremiumText5":"🔥 Statistik",
+    "upgradeBottomSheetPremiumText5":"Statistik",
     "upgradeBottomSheetPremiumText6":" Highend- und UltraProp Analytics",
     "upgradeBottomSheetPremiumText7":" Winrate, Trades, Profit Factor, Max DrowDown uvm.",
-    "upgradeBottomSheetPremiumText8":"🔥 Signal-Historie",
+    "upgradeBottomSheetPremiumText8":"Signal-Historie",
     "upgradeBottomSheetPremiumText9":" Datums-, Asset-, Statussuche.",
-    "upgradeBottomSheetPremiumText10":"🔥 Tradedetails",
-    "upgradeBottomSheetPremiumText11":" Entry, Stop, TP & Realtime-Charts",
-    "upgradeBottomSheetPremiumText12":"🔥 Pushes von professionellen Tradern",
-    "upgradeBottomSheetPremiumText13":"🔥 EA Copytrading 🔥",
-    "upgradeBottomSheetPremiumText14":" automatisierter Handel über einen EA Robot"
+  "upgradeBottomSheetPremiumText10":"Tradedetails",
+  "upgradeBottomSheetPremiumText11":" Entry, Stop, TP & Realtime-Charts",
+  "upgradeBottomSheetPremiumText12":"Pushes von professionellen Tradern",
+  "upgradeBottomSheetPremiumText13":"EA Copytrading 🔥",
+  "upgradeBottomSheetPremiumText14":" automatisierter Handel über einen EA Robot"
 
   }
 }
