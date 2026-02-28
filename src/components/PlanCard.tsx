@@ -132,7 +132,7 @@ export default function PlanCard({
 
         {/* MONTHLY */}
         <div
-          className={`pricing-box ${selectedPlan === "monthly" ? "active" : ""}`}
+          className={`pricing-box ${selectedPlan === "monthly" ? "active" : ""} ${theme}`}
           onClick={() => setSelectedPlan("monthly")}
         >
           <div className="discount-badge">
@@ -151,7 +151,7 @@ export default function PlanCard({
 
         {/* YEARLY */}
         <div
-          className={`pricing-box ${selectedPlan === "yearly" ? "active" : ""}`}
+          className={`pricing-box ${selectedPlan === "yearly" ? "active" : ""} ${theme}`}
           onClick={() => setSelectedPlan("yearly")}
         >
 
