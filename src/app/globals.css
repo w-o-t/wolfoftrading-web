@@ -325,6 +325,7 @@ body {
 .pricing-text {
   font-size: 16px;
   font-weight: 600;
+  color: #857150;
 }
 
 /* Discount Badge */
@@ -333,7 +334,7 @@ body {
   top: -10px;
   right: 16px;
   background: white;
-  color: rgb(121, 119, 119);
+  color: rgb(114, 113, 113);
   font-size: 11px;
   padding: 4px 10px;
   border-radius: 999px;
@@ -346,8 +347,8 @@ body {
   padding: 14px;
   border-radius: 16px;
   font-weight: 600;
-  background: white;
-  color: rgb(121, 119, 119);
+  background: #1e1e1e;
+  color: #857150;
   border: none;
   cursor: pointer;
   transition: 0.2s ease;
