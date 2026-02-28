@@ -270,3 +270,89 @@ body {
 .plan-main-button:hover {
   opacity: 0.9;
 }
+
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+/* Pricing Box */
+.pricing-box {
+  position: relative;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #1f1f1f;
+  border: 1px solid #2c2c2c;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pricing-box:hover {
+  background: #242424;
+}
+
+.pricing-box.active {
+  border: 2px solid white;
+}
+
+/* Left Side */
+.pricing-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Radio */
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.pricing-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: white;
+  color: black;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Main Button */
+.pricing-main-button {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 16px;
+  font-weight: 600;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pricing-main-button:hover {
+  opacity: 0.9;
+}

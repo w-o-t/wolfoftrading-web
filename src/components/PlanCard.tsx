@@ -29,7 +29,6 @@ export default function PlanCard({
 
   const isPremium = type === "premium";
   const t = useTranslations("pricing");
-
   const [selectedPlan, setSelectedPlan] = useState<"monthly" | "yearly">("monthly");
 
   const startCheckout = async (priceId: string) => {
@@ -37,15 +36,6 @@ export default function PlanCard({
     if (!userId) {
       alert("User ID fehlt");
       return;
-    }
-
-    let promoCode: string | null = null;
-
-    if (
-      priceId == process.env.NEXT_PUBLIC_PRICE_PREMIUM_MONTHLY ||
-      priceId == process.env.NEXT_PUBLIC_PRICE_STANDARD_MONTHLY
-    ) {
-      // promoCode = "promo_XXXXX";
     }
 
     const res = await fetch(
@@ -56,7 +46,7 @@ export default function PlanCard({
         body: JSON.stringify({
           priceId,
           userId,
-          promoCode,
+          promoCode: null,
         }),
       }
     );
@@ -126,23 +116,23 @@ export default function PlanCard({
         ))}
       </ul>
 
-      {/* PRICING */}
-      <div className="pricing-options">
+      {/* PRICING SELECTION */}
+      <div className="pricing-section">
 
         {/* MONTHLY */}
         <div
-          className={`price-option ${selectedPlan === "monthly" ? "selected" : ""}`}
+          className={`pricing-box ${selectedPlan === "monthly" ? "active" : ""}`}
           onClick={() => setSelectedPlan("monthly")}
         >
           <div className="discount-badge">
             30% OFF – nur im ersten Monat
           </div>
 
-          <div className="option-left">
-            <div className="option-radio">
-              {selectedPlan === "monthly" ? "●" : ""}
+          <div className="pricing-left">
+            <div className="radio-circle">
+              {selectedPlan === "monthly" && <div className="radio-dot" />}
             </div>
-            <div className="option-text">
+            <div className="pricing-text">
               {mtlPrice}
             </div>
           </div>
@@ -150,22 +140,22 @@ export default function PlanCard({
 
         {/* YEARLY */}
         <div
-          className={`price-option ${selectedPlan === "yearly" ? "selected" : ""}`}
+          className={`pricing-box ${selectedPlan === "yearly" ? "active" : ""}`}
           onClick={() => setSelectedPlan("yearly")}
         >
-          <div className="option-left">
-            <div className="option-radio">
-              {selectedPlan === "yearly" ? "●" : ""}
+          <div className="pricing-left">
+            <div className="radio-circle">
+              {selectedPlan === "yearly" && <div className="radio-dot" />}
             </div>
-            <div className="option-text">
+            <div className="pricing-text">
               {yrlPrice}
             </div>
           </div>
         </div>
 
-        {/* BUTTON */}
+        {/* MAIN BUTTON */}
         <button
-          className="plan-main-button"
+          className="pricing-main-button"
           onClick={() =>
             startCheckout(
               selectedPlan === "monthly" ? monthlyPriceId : yearlyPriceId
