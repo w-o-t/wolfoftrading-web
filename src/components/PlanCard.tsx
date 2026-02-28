@@ -143,6 +143,11 @@ export default function PlanCard({
           className={`pricing-box ${selectedPlan === "yearly" ? "active" : ""}`}
           onClick={() => setSelectedPlan("yearly")}
         >
+
+          <div className="discount-badge">
+            20% OFF – nur im ersten Monat
+          </div>
+
           <div className="pricing-left">
             <div className="radio-circle">
               {selectedPlan === "yearly" && <div className="radio-dot" />}
