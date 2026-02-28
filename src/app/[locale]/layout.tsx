@@ -10,7 +10,8 @@ type Props = {
 
 export default async function LocaleLayout({children, params}: Props) {
   const {locale} = await params;
-  const messages = await getMessages();
+
+  const messages = await getMessages({ locale }); // 👈 WICHTIG
 
   return (
     <html lang={locale}>
