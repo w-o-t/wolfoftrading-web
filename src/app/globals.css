@@ -218,7 +218,7 @@ body {
 }
 
 .price-option.selected {
-  border: 2px solid #1e1e1e;
+  border: 2px solid var(--primary-color);
 }
 
 .option-left {
@@ -309,7 +309,7 @@ body {
 }
 
 .pricing-box.active {
-  border: 2px solid white;
+  border: 2px solid rgb(0, 0, 0);
 }
 
 /* Left Side */
