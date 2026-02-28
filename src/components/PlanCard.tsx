@@ -69,6 +69,14 @@ export default function PlanCard({
     ? `950,40 € / ${t("year")}*`
     : `529,20 € / ${t("year")}*`;
 
+    const mtlBadge = isPremium
+    ? `${t("mtlBadgePremium")}`
+    : `${t("mtlBadgeStandard")}`;
+
+    const yrlBadge = isPremium
+    ? `${t("yrlBadgePremium")}`
+    : `${t("yrlBadgeStandard")}`;
+
   const badgeImages = {
     premium: "/images/premium.png",
     standard: "/images/standard.png",
@@ -125,7 +133,7 @@ export default function PlanCard({
           onClick={() => setSelectedPlan("monthly")}
         >
           <div className="discount-badge">
-            30% OFF – nur im ersten Monat
+            {mtlBadge}
           </div>
 
           <div className="pricing-left">
@@ -145,7 +153,7 @@ export default function PlanCard({
         >
 
           <div className="discount-badge">
-            20% OFF – nur im ersten Monat
+            {yrlBadge}
           </div>
 
           <div className="pricing-left">
@@ -167,11 +175,11 @@ export default function PlanCard({
             )
           }
         >
-          Jetzt buchen
+          {t("registNow")}
         </button>
 
       </div>
-
+      <ul></ul>
       <ul className="plan-list-short">
         {t("coupon")}
       </ul>

@@ -333,7 +333,7 @@ body {
   top: -10px;
   right: 16px;
   background: white;
-  color: black;
+  color: rgb(87, 86, 86);
   font-size: 11px;
   padding: 4px 10px;
   border-radius: 999px;
@@ -347,7 +347,7 @@ body {
   border-radius: 16px;
   font-weight: 600;
   background: white;
-  color: black;
+  color: rgb(87, 86, 86);
   border: none;
   cursor: pointer;
   transition: 0.2s ease;

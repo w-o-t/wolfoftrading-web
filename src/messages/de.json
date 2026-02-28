@@ -26,8 +26,13 @@
   "upgradeBottomSheetPremiumText12":"Pushes von professionellen Tradern",
   "upgradeBottomSheetPremiumText13":"EA Copytrading 🔥",
   "upgradeBottomSheetPremiumText14":" automatisierter Handel über einen EA Robot",
+  "mtlBadgePremium":"-30% Rabatt - im ersten Monat, danach 99,00€/mtl",
+  "mtlBadgeStandard":"-30% Rabatt - im ersten Monat, danach 49,00€/mtl",
+  "yrlBadgePremium":"-20% Rabatt",
+  "yrlBadgeStandard":"-10% Rabatt",
+  "registNow":"jetzt buchen",
 
-  "coupon":"* Preis mtl. = mtl. und jährl. = jährl. kündbar. | Aktion: -10% Standard Trader jährl. / -20% Premium Trader jährl."
+  "coupon":"* Preis mtl. = mtl. und jährl. = jährl. kündbar."
 
   }
 }
